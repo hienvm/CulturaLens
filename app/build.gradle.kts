@@ -50,7 +50,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.sceneview)
     implementation(libs.arsceneview)
+    implementation(libs.androidx.material)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
