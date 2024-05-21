@@ -7,23 +7,20 @@ import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Checkbox
 import androidx.compose.material.DropdownMenu
 import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.Icon
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.IconToggleButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Settings
@@ -44,10 +41,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.culturalens.ModelWrapper
 import com.example.culturalens.R
-import com.example.culturalens.components.TopBar
 import com.example.culturalens.activity
 import com.example.culturalens.components.ModelChoiceBar
 import com.example.culturalens.components.OFFSET
+import com.example.culturalens.components.TopBar
 import com.example.culturalens.ui.theme.CulturaLensTheme
 import com.google.ar.core.Config
 import com.google.ar.core.Frame
@@ -226,7 +223,7 @@ fun ProjectorView(
                             getCurModel()!!.descrImgID,
                         ),
                         center = Position(y = 1.2f)
-                    )
+                    ).apply { isVisible = false }
                     anchorNode.addChildNode(
                         ModelNode(
                             modelInstance = modelLoader.createInstance(

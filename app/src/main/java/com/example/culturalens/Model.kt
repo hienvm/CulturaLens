@@ -79,9 +79,9 @@ val models = listOfNotNull(
         position = Position(x = -0.5f)
     ),
     ModelWrapper(
-        modelID = R.raw.dong_son_sword,
+        modelID = R.raw.ghe_go,
         imgID = R.drawable.dong_son_sword,
-        scaleToUnits = 0.7f,
+        scaleToUnits = 0.1f,
         name = "Kiếm đồng Đông Sơn",
         text = "Kiếm đồng thời Đông Sơn (thế kỷ 7 TCN - thế kỷ 6 CN), đại biểu cho kỹ nghệ chế tác đồng và sức mạnh dân tộc, quyết tâm giữ nước của người Việt xưa.",
         descrImgID = R.drawable.kiem_dong_son_descr

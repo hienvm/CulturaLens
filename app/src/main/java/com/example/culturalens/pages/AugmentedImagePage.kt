@@ -80,7 +80,7 @@ fun AugmentedImageView() {
                             val idx = aImg.name.substring(2).toInt()
                             node = ModelNode(
                                 modelInstance = modelLoader.createInstance(
-                                    modelCache.getOrPut(models[aImg.name.toInt()].modelID) {
+                                    modelCache.getOrPut(models[idx].modelID) {
                                         modelLoader.createModel(
                                             models[idx].modelID
                                         )
@@ -98,18 +98,18 @@ fun AugmentedImageView() {
                                     activity.resources,
                                     aImg.name.toInt(),
                                 ),
-                                center = Position(y = 0.2f)
+                                center = Position(y = 0.1f)
                             )
                         }
                         addChildNode(node)
                         onTrackingStateChanged = {
                             Toast.makeText(context, "Tracking State Change", Toast.LENGTH_LONG).show()
-                            if (it != TrackingState.TRACKING) {
-                                childNodes.remove(this)
-                                node.destroy()
-                                this.destroy()
-                                aImgCache.remove(aImg.name)
-                            }
+//                            if (it != TrackingState.TRACKING) {
+//                                childNodes.remove(this)
+//                                node.destroy()
+//                                this.destroy()
+//                                aImgCache.remove(aImg.name)
+//                            }
                         }
                     }
                     aImgCache[aImg.name] = aImgNode
@@ -126,7 +126,7 @@ fun AugmentedImageView() {
             // Config database
             config.addAugmentedImage(
                 session,
-                (models.size - 1).toString(),
+                "3D" + (models.size - 1).toString(),
                 BitmapFactory.decodeResource(activity.resources, R.drawable.notebook)
             )
             config.addAugmentedImage(

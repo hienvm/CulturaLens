@@ -1,20 +1,11 @@
 package com.example.culturalens.pages
 
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -32,26 +23,19 @@ import com.example.culturalens.R
 import com.example.culturalens.components.Header
 import com.example.culturalens.components.ModelChoiceBar
 import com.example.culturalens.components.TopBar
-import com.example.culturalens.models
 import com.google.android.filament.Engine
 import io.github.sceneview.Scene
-import io.github.sceneview.animation.Transition.animateRotation
 import io.github.sceneview.ar.ARSceneView
 import io.github.sceneview.loaders.ModelLoader
 import io.github.sceneview.math.Position
-import io.github.sceneview.math.Rotation
 import io.github.sceneview.model.Model
 import io.github.sceneview.node.CameraNode
 import io.github.sceneview.node.ModelNode
 import io.github.sceneview.node.Node
-import io.github.sceneview.rememberCameraNode
 import io.github.sceneview.rememberEngine
 import io.github.sceneview.rememberEnvironmentLoader
 import io.github.sceneview.rememberModelLoader
-import io.github.sceneview.rememberNode
 import io.github.sceneview.rememberNodes
-import kotlin.time.Duration.Companion.seconds
-import kotlin.time.DurationUnit
 
 @Composable
 fun GalleryPage(navController: NavController) {
